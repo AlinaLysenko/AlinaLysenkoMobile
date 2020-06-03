@@ -5,7 +5,9 @@ import driver.DriverHolder;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
+import setup.BaseTest;
 import utils.PropertyLoader;
+import data.MobileTestDataProvider;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

@@ -1,4 +1,4 @@
-package scenarios;
+package data;
 
 import entities.Profile;
 import org.testng.annotations.DataProvider;
