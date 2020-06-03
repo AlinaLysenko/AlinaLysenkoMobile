@@ -3,6 +3,8 @@ package scenarios;
 import apps.nativeapp.NativeApp;
 import entities.Profile;
 import org.testng.annotations.Test;
+import setup.BaseTest;
+import data.MobileTestDataProvider;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

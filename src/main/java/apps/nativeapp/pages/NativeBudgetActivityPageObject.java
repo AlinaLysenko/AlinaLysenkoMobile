@@ -2,6 +2,7 @@ package apps.nativeapp.pages;
 
 import apps.PageObject;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import org.openqa.selenium.WebElement;
 
 public class NativeBudgetActivityPageObject extends PageObject {
@@ -15,6 +16,7 @@ public class NativeBudgetActivityPageObject extends PageObject {
             "/android.widget.FrameLayout[2]" +
             "/android.view.ViewGroup" +
             "/android.widget.TextView")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@label='Budget']")
     private WebElement title;
 
     public NativeBudgetActivityPageObject() {

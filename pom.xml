@@ -8,6 +8,10 @@
     <artifactId>AlinaLysenkoMobile</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <token>f4cffb0f-9a34-4e83-a1ac-6ce12e2a1645</token>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>io.appium</groupId>
@@ -47,7 +51,8 @@
                         <suiteXmlFile>${suite.file}</suiteXmlFile>
                     </suiteXmlFiles>
                     <systemPropertyVariables>
-                        <ts.appium>http://localhost:4723/wd/hub</ts.appium>
+                        <!--<ts.appium>http://localhost:4723/wd/hub</ts.appium>-->
+                        <ts.appium>https://EPM-TSTF:${token}@mobilecloud.epam.com/wd/hub</ts.appium>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
@@ -81,6 +86,42 @@
             </activation>
             <properties>
                 <suite.file>./src/test/resources/webTNG.xml</suite.file>
+            </properties>
+        </profile>
+        <profile>
+            <id>cloudAndroidNative</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suite.file>src/test/resources/cloudAndroidNative.xml</suite.file>
+            </properties>
+        </profile>
+        <profile>
+            <id>cloudAndroidWeb</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suite.file>src/test/resources/cloudAndroidWeb.xml</suite.file>
+            </properties>
+        </profile>
+        <profile>
+            <id>cloudIOSNative</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suite.file>src/test/resources/cloudIOSNative.xml</suite.file>
+            </properties>
+        </profile>
+        <profile>
+            <id>cloudIOSWeb</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suite.file>src/test/resources/cloudIOSWeb.xml</suite.file>
             </properties>
         </profile>
     </profiles>
